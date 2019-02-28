@@ -50,7 +50,9 @@ namespace DmlApi
                 ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
             });
 
-            app.UseHttpsRedirection();            
+            if (this.Configuration.GetValue<bool>("Host:Https:Enabled") && this.Configuration.GetValue<bool>("Host:Https:Force"))
+                app.UseHttpsRedirection();
+
             app.UseMvc();            
         }
     }
