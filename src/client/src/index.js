@@ -30,7 +30,6 @@ class App extends React.Component {
     }
 
     onSourceChange(source) {
-        console.log(process.env);
         fetch(process.env.REACT_APP_DML_PLAYGROUND_API, {
             method: "POST", // *GET, POST, PUT, DELETE, etc.
             mode: "cors", // no-cors, cors, *same-origin

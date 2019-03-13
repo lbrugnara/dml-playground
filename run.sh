@@ -1,4 +1,4 @@
 #!/bin/bash
-dotnet run --project api/DmlPlaygroundApi.csproj &
-cd client/src
+dotnet run --project src/api/DmlPlaygroundApi.csproj &
+cd src/client/src
 npm start

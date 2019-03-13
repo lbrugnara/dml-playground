@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
-using DmlLib.Core;
+using DmlApi.Controllers.Parser.Dtos;
+using DmlLib.Semantic;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DmlApi.Controllers
+namespace DmlApi.Controllers.Parser
 {
     [Route("api/v1/parser")]
     [ApiController]
@@ -17,7 +17,7 @@ namespace DmlApi.Controllers
         public IActionResult Version()
         {
             var playgroundVersion = Assembly.GetAssembly(this.GetType()).GetName().Version;
-            var dmlVersion = Assembly.GetAssembly(typeof(DmlLib.Core.Parser)).GetName().Version;
+            var dmlVersion = Assembly.GetAssembly(typeof(DmlLib.Semantic.Parser)).GetName().Version;
             return Ok(new {
                 playground = $"v{playgroundVersion.Major}.{playgroundVersion.Minor}.{playgroundVersion.Build}",
                 dml = $"v{dmlVersion.Major}.{dmlVersion.Minor}.{dmlVersion.Build}"
@@ -35,7 +35,7 @@ namespace DmlApi.Controllers
             {
                 var lexer = new Lexer(input.Source);
                 var tokens = lexer.Tokenize();
-                var parser = new Parser();
+                var parser = new DmlLib.Semantic.Parser();
                 var doc = parser.Parse(tokens);
                 return Ok(new DocumentOutput()
                 {

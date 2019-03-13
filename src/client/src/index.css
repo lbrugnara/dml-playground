@@ -23,6 +23,7 @@ body, html, #root {
 .panel.source {
     background: #fafafa;
     border-right: 1px solid #cacaca;
+    white-space: pre;
 }
 
 .panel.output {

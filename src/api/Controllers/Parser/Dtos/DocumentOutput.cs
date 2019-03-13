@@ -1,7 +1,7 @@
-﻿using DmlLib.Core;
+﻿using DmlLib.Semantic;
 using System.Collections.Generic;
 
-namespace DmlApi.Controllers
+namespace DmlApi.Controllers.Parser.Dtos
 {
     public class DocumentOutput
     {

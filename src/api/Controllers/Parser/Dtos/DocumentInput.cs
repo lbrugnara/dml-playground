@@ -1,4 +1,4 @@
-﻿namespace DmlApi.Controllers
+﻿namespace DmlApi.Controllers.Parser.Dtos
 {
     public class DocumentInput
     {

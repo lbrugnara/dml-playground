@@ -8,9 +8,22 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="dml" Version="0.1.0" />
+    <Content Include="Controllers\Parser\Dtos\DocumentInput.cs" />
+    <Content Include="Controllers\Parser\Dtos\DocumentOutput.cs" />
+    <Content Include="Controllers\Parser\ParserController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="dml" Version="0.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\content\intro.dml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
