@@ -1,0 +1,26 @@
+body, html, #root {
+  margin: 0px;
+}
+
+#root {
+    min-width: 400px;
+}
+
+.editor {
+    width: 100%;
+    top: 0px;
+    bottom: 0px;
+}
+
+.panel {    
+    margin: 0;
+}
+
+.panel.source {
+    background: #fafafa;
+    white-space: pre-line;
+    word-break: break-word;
+}
+
+.panel.preview {
+}

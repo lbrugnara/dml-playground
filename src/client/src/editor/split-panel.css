@@ -1,0 +1,30 @@
+.handler {
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    left: calc(50% - 2px);
+    background-color: #d4dbe0;
+    z-index: 2;
+}
+
+.handler:hover {
+    cursor: ew-resize;
+}
+
+.scrollable-panel {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.left-panel {
+    left: 0;
+}
+
+.right-panel {
+    right: 0;
+}
